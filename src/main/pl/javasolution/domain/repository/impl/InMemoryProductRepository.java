@@ -5,8 +5,7 @@ import main.pl.javasolution.domain.repository.ProductRepository;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 @Repository
 public class InMemoryProductRepository implements ProductRepository {
@@ -56,5 +55,38 @@ public class InMemoryProductRepository implements ProductRepository {
             throw new IllegalArgumentException("Brak przedmiotu o wskazanym id: "+ productId);
         }
         return productById;
+    }
+
+    @Override
+    public List<Product> getProductByCategory(String category) {
+        List<Product> productByCategory = new ArrayList<>();
+        listOfProducts.stream().forEach(product -> {
+            if (category.equalsIgnoreCase(product.getCategory())){
+                productByCategory.add(product);
+            }
+        });
+        return productByCategory;
+    }
+
+    @Override
+    public Set<Product> getProductsByFilter(Map<String, List<String>> filterParams) {
+        Set<Product> productsByBrand = new HashSet<>();
+        Set<Product> productsByCategory = new HashSet<>();
+        Set<String> criterias = filterParams.keySet();
+        if (criterias.contains("brand")){
+            filterParams.get("brand").stream().forEach(brandName ->{
+                listOfProducts.stream().forEach(product -> {
+                    if(brandName.equalsIgnoreCase(product.getManufacturer())){
+                        productsByBrand.add(product);
+                    }
+                });
+            });
+        }
+        if (criterias.contains("category")){
+            filterParams.get("category").stream().forEach(category ->
+                    productsByCategory.addAll(this.getProductByCategory(category)));
+        }
+        productsByCategory.retainAll(productsByBrand);
+        return productsByCategory;
     }
 }

@@ -16,7 +16,7 @@ public class OrderServiceImpl implements OrderService {
     public void processOrder(String productId, int count) {
         Product productById = productRepository.getProductById(productId);
         if (productById.getUnitsInStock() < count){
-            throw new IllegalArgumentException("Zbyt mało towaru. Obecna liczba sztuk w magazynie: "+ productById.getUnitsInStock());
+            throw new IllegalArgumentException("Zbyt mało towaru.Obecna liczba sztuk w magazynie: "+ productById.getUnitsInStock());
         }
         productById.setUnitsInStock(productById.getUnitsInStock() - count);
     }
