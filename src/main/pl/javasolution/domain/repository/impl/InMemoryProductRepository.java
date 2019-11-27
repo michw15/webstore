@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
 import java.util.*;
+import java.util.stream.Collectors;
 
 @Repository
 public class InMemoryProductRepository implements ProductRepository {
@@ -88,5 +89,29 @@ public class InMemoryProductRepository implements ProductRepository {
         }
         productsByCategory.retainAll(productsByBrand);
         return productsByCategory;
+    }
+
+    @Override
+    public List<Product> getProductsByManufacturer(String manufacturer) {
+        List<Product> productsByManufacturer = new ArrayList<>();
+        listOfProducts.stream().forEach(product-> {
+            if (product.getManufacturer().equalsIgnoreCase(manufacturer)){
+                productsByManufacturer.add(product);
+            } }
+        );
+        return productsByManufacturer;
+    }
+
+    @Override
+    public List<Product> getProductByPriceFilter(Map<String, String> priceParams) {
+        List<Product> priceFiltered = listOfProducts.stream().filter(product ->
+                product.getUnitPrice().intValue() >= Integer.parseInt(priceParams.get("low")) && product.getUnitPrice().intValue() <= Integer.parseInt(priceParams.get("high")))
+                .collect(Collectors.toList());
+        return priceFiltered;
+    }
+
+    @Override
+    public void addProduct(Product product) {
+        listOfProducts.add(product);
     }
 }

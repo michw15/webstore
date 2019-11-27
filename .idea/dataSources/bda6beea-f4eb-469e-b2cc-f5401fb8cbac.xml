@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Microsoft SQL Server - @localhost">
+  <database-model serializer="dbm" dbms="MSSQL" family-id="MSSQL" format-version="4.15">
+    <root id="1">
+      <ServerVersion>12.0.2269</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="master">
+      <ObjectId>1</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+      <Collation>Polish_CI_AS</Collation>
+      <Fingerprint>1.37717/00000000-0000-0000-0000-000000000000@DESKTOP-S2HCDAR\SQLEXPRESS</Fingerprint>
+    </database>
+    <database id="3" parent="1" name="model">
+      <ObjectId>3</ObjectId>
+      <Collation>Polish_CI_AS</Collation>
+    </database>
+    <database id="4" parent="1" name="msdb">
+      <ObjectId>4</ObjectId>
+      <Collation>Polish_CI_AS</Collation>
+    </database>
+    <database id="5" parent="1" name="tempdb">
+      <ObjectId>2</ObjectId>
+      <Collation>Polish_CI_AS</Collation>
+    </database>
+    <schema id="6" parent="2" name="INFORMATION_SCHEMA">
+      <ObjectId>3</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="db_accessadmin">
+      <ObjectId>16385</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="db_backupoperator">
+      <ObjectId>16389</ObjectId>
+    </schema>
+    <schema id="9" parent="2" name="db_datareader">
+      <ObjectId>16390</ObjectId>
+    </schema>
+    <schema id="10" parent="2" name="db_datawriter">
+      <ObjectId>16391</ObjectId>
+    </schema>
+    <schema id="11" parent="2" name="db_ddladmin">
+      <ObjectId>16387</ObjectId>
+    </schema>
+    <schema id="12" parent="2" name="db_denydatareader">
+      <ObjectId>16392</ObjectId>
+    </schema>
+    <schema id="13" parent="2" name="db_denydatawriter">
+      <ObjectId>16393</ObjectId>
+    </schema>
+    <schema id="14" parent="2" name="db_owner">
+      <ObjectId>16384</ObjectId>
+    </schema>
+    <schema id="15" parent="2" name="db_securityadmin">
+      <ObjectId>16386</ObjectId>
+    </schema>
+    <schema id="16" parent="2" name="dbo">
+      <ObjectId>1</ObjectId>
+      <IntrospectionTimestamp>2019-11-12.21:46:26.140</IntrospectionTimestamp>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="17" parent="2" name="guest">
+      <ObjectId>2</ObjectId>
+    </schema>
+    <schema id="18" parent="2" name="sys">
+      <ObjectId>4</ObjectId>
+    </schema>
+    <table id="19" parent="16" name="MSreplication_options">
+      <ObjectId>1787153412</ObjectId>
+      <CreatedTimestamp>2014-02-20.21:50:43.983</CreatedTimestamp>
+      <ModifiedTimestamp>2014-02-20.21:51:04.163</ModifiedTimestamp>
+    </table>
+    <table id="20" parent="16" name="dbo.Products">
+      <ObjectId>279672044</ObjectId>
+      <CreatedTimestamp>2019-11-12.21:15:33.290</CreatedTimestamp>
+      <ModifiedTimestamp>2019-11-12.21:27:08.150</ModifiedTimestamp>
+    </table>
+    <table id="21" parent="16" name="spt_fallback_db">
+      <ObjectId>117575457</ObjectId>
+      <CreatedTimestamp>2003-04-08.11:18:01.557</CreatedTimestamp>
+      <ModifiedTimestamp>2014-02-20.21:51:04.127</ModifiedTimestamp>
+    </table>
+    <table id="22" parent="16" name="spt_fallback_dev">
+      <ObjectId>133575514</ObjectId>
+      <CreatedTimestamp>2003-04-08.11:18:02.870</CreatedTimestamp>
+      <ModifiedTimestamp>2014-02-20.21:51:04.137</ModifiedTimestamp>
+    </table>
+    <table id="23" parent="16" name="spt_fallback_usg">
+      <ObjectId>149575571</ObjectId>
+      <CreatedTimestamp>2003-04-08.11:18:04.180</CreatedTimestamp>
+      <ModifiedTimestamp>2014-02-20.21:51:04.143</ModifiedTimestamp>
+    </table>
+    <table id="24" parent="16" name="spt_monitor">
+      <ObjectId>1483152329</ObjectId>
+      <CreatedTimestamp>2014-02-20.21:49:38.300</CreatedTimestamp>
+      <ModifiedTimestamp>2014-02-20.21:51:04.157</ModifiedTimestamp>
+    </table>
+    <view id="25" parent="16" name="spt_values">
+      <ObjectId>1467152272</ObjectId>
+      <SourceTextLength>161</SourceTextLength>
+      <CreatedTimestamp>2014-02-20.21:49:38.257</CreatedTimestamp>
+      <ModifiedTimestamp>2014-02-20.21:49:38.300</ModifiedTimestamp>
+    </view>
+    <routine id="26" parent="16" name="sp_MScleanupmergepublisher">
+      <ObjectId>1819153526</ObjectId>
+      <SourceTextLength>100</SourceTextLength>
+      <CreatedTimestamp>2014-02-20.21:50:44.080</CreatedTimestamp>
+      <ModifiedTimestamp>2014-02-20.21:51:04.180</ModifiedTimestamp>
+      <RoutineKind>procedure</RoutineKind>
+      <RoutineType>proc</RoutineType>
+    </routine>
+    <routine id="27" parent="16" name="sp_MSrepl_startup">
+      <ObjectId>1803153469</ObjectId>
+      <SourceTextLength>83</SourceTextLength>
+      <CreatedTimestamp>2014-02-20.21:50:44.060</CreatedTimestamp>
+      <ModifiedTimestamp>2014-02-20.21:51:04.173</ModifiedTimestamp>
+      <RoutineKind>procedure</RoutineKind>
+      <RoutineType>proc</RoutineType>
+    </routine>
+    <column id="28" parent="19" name="optname">
+      <Position>1</Position>
+      <DataType>sysname|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="19" name="value">
+      <Position>2</Position>
+      <DataType>bit|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="19" name="major_version">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="19" name="minor_version">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="19" name="revision">
+      <Position>5</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="19" name="install_failures">
+      <Position>6</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="20" name="ID">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="20" name="Name">
+      <Position>2</Position>
+      <DataType>varchar(36 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="20" name="UnitPrice">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="37" parent="20" name="Description">
+      <Position>4</Position>
+      <DataType>varchar(255 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="20" name="Manufacturer">
+      <Position>5</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="20" name="Category">
+      <Position>6</Position>
+      <DataType>varchar(36 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="20" name="UnitInStock">
+      <Position>7</Position>
+      <DataType>float|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="20" name="UnitInOrder">
+      <Position>8</Position>
+      <DataType>float|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="20" name="Discontinuated">
+      <Position>9</Position>
+      <DataType>bit|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="20" name="Condition">
+      <Position>10</Position>
+      <DataType>varchar(36 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="44" parent="20" name="dbo.Products_ID_uindex">
+      <Position>2</Position>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="45" parent="20" name="dbo.Products_pk">
+      <Position>3</Position>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="46" parent="20" name="dbo.Products_pk">
+      <ObjectId>295672101</ObjectId>
+      <CreatedTimestamp>2019-11-12.21:15:33.363</CreatedTimestamp>
+      <ModifiedTimestamp>2019-11-12.21:15:33.363</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <UnderlyingIndexName>dbo.Products_pk</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="47" parent="21" name="xserver_name">
+      <Position>1</Position>
+      <DataType>varchar(30 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="48" parent="21" name="xdttm_ins">
+      <Position>2</Position>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="49" parent="21" name="xdttm_last_ins_upd">
+      <Position>3</Position>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="50" parent="21" name="xfallback_dbid">
+      <Position>4</Position>
+      <DataType>smallint|0s</DataType>
+    </column>
+    <column id="51" parent="21" name="name">
+      <Position>5</Position>
+      <DataType>varchar(30 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="52" parent="21" name="dbid">
+      <Position>6</Position>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="53" parent="21" name="status">
+      <Position>7</Position>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="54" parent="21" name="version">
+      <Position>8</Position>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="55" parent="22" name="xserver_name">
+      <Position>1</Position>
+      <DataType>varchar(30 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="22" name="xdttm_ins">
+      <Position>2</Position>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="57" parent="22" name="xdttm_last_ins_upd">
+      <Position>3</Position>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="58" parent="22" name="xfallback_low">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="59" parent="22" name="xfallback_drive">
+      <Position>5</Position>
+      <DataType>char(2 char)|0s</DataType>
+    </column>
+    <column id="60" parent="22" name="low">
+      <Position>6</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="61" parent="22" name="high">
+      <Position>7</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="62" parent="22" name="status">
+      <Position>8</Position>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="63" parent="22" name="name">
+      <Position>9</Position>
+      <DataType>varchar(30 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="64" parent="22" name="phyname">
+      <Position>10</Position>
+      <DataType>varchar(127 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="65" parent="23" name="xserver_name">
+      <Position>1</Position>
+      <DataType>varchar(30 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="66" parent="23" name="xdttm_ins">
+      <Position>2</Position>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="67" parent="23" name="xdttm_last_ins_upd">
+      <Position>3</Position>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="68" parent="23" name="xfallback_vstart">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="69" parent="23" name="dbid">
+      <Position>5</Position>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="23" name="segmap">
+      <Position>6</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="71" parent="23" name="lstart">
+      <Position>7</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="72" parent="23" name="sizepg">
+      <Position>8</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="73" parent="23" name="vstart">
+      <Position>9</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="74" parent="24" name="lastrun">
+      <Position>1</Position>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="75" parent="24" name="cpu_busy">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="76" parent="24" name="io_busy">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="77" parent="24" name="idle">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="78" parent="24" name="pack_received">
+      <Position>5</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="79" parent="24" name="pack_sent">
+      <Position>6</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="80" parent="24" name="connections">
+      <Position>7</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="81" parent="24" name="pack_errors">
+      <Position>8</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="82" parent="24" name="total_read">
+      <Position>9</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="83" parent="24" name="total_write">
+      <Position>10</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="84" parent="24" name="total_errors">
+      <Position>11</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="85" parent="25" name="name">
+      <Position>1</Position>
+      <DataType>nvarchar(35 char)|0s</DataType>
+    </column>
+    <column id="86" parent="25" name="number">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="87" parent="25" name="type">
+      <Position>3</Position>
+      <DataType>nchar(3 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="88" parent="25" name="low">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="89" parent="25" name="high">
+      <Position>5</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="90" parent="25" name="status">
+      <Position>6</Position>
+      <DataType>int|0s</DataType>
+    </column>
+  </database-model>
+</dataSource>

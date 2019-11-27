@@ -17,4 +17,5 @@ public class CustomerController {
         model.addAttribute("customers",customerService.getAllCustomer());
         return "customers";
     }
+
 }
