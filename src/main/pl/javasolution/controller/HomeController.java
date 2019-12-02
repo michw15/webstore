@@ -14,4 +14,9 @@ public class HomeController {
         model.addAttribute("tagline","Wyjatkowym i jedynym sklepie internetowym");
         return "welcome";
     }
+
+    @RequestMapping(value = "/welcome/greeting",method = RequestMethod.GET)
+    public String greeting(){
+        return "welcome";
+    }
 }
