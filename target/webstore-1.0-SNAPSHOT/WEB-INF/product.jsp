@@ -17,6 +17,13 @@
 <section class="container">
     <div class="row">
             <div class="col-md-5">
+                <img src="<c:url value="/images/${product.productId}.jpg"></c:url>"
+                     alt="image" style="width: 100%"/>
+            </div>
+        <%--            <div class="col-md-5">--%>
+<%--              <a href="/pdf/${product.productId}.pdf" target="_blank">Plik produktu</a>--%>
+<%--            </div>--%>
+            <div class="col-md-5">
                 <h3>${product.name}</h3>
                 <p>${product.description}</p>
                 <p>
@@ -40,6 +47,9 @@
                     </a>
                     <a href="<spring:url value="/products" />" class="btn btndefault">
                         <span class="glyphicon-hand-left glyphicon"></span> Wstecz
+                    </a>
+                    <a href="<spring:url value="/products/product.pdf?id=${product.productId}" />" class="btn btndefault">
+                        <span class="glyphicon-hand-left glyphicon"></span> Wygeneruj raport
                     </a>
                 </p>
             </div>

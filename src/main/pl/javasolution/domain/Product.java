@@ -1,7 +1,13 @@
 package main.pl.javasolution.domain;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+import org.springframework.web.multipart.MultipartFile;
+
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 import java.math.BigDecimal;
 
+@XmlRootElement(name = "product")
 public class Product {
 
     private String productId;
@@ -14,12 +20,16 @@ public class Product {
     private long unitsInOrder;
     private boolean discontinued;
     private String condition;
+    @JsonIgnore
+    private MultipartFile productImage;
+    @JsonIgnore
+    private MultipartFile productFile;
 
-    public Product(){
+    public Product() {
         super();
     }
 
-    public Product(String productId, String name, BigDecimal unitPrice){
+    public Product(String productId, String name, BigDecimal unitPrice) {
         this.productId = productId;
         this.name = name;
         this.unitPrice = unitPrice;
@@ -105,20 +115,33 @@ public class Product {
         this.condition = condition;
     }
 
+    @XmlTransient
+    public MultipartFile getProductImage() {
+        return productImage;
+    }
+
+    public void setProductImage(MultipartFile productImage) {
+        this.productImage = productImage;
+    }
+
+    @XmlTransient
+    public MultipartFile getProductFile() { return productFile; }
+
+    public void setProductFile(MultipartFile productFile) { this.productFile = productFile; }
+
     @Override
     public boolean equals(Object obj) {
-        if(this == obj)
+        if (this == obj)
             return true;
         if (obj == null)
             return false;
         if (getClass() != obj.getClass())
             return false;
         Product other = (Product) obj;
-        if (productId == null){
+        if (productId == null) {
             if (other.productId != null)
                 return false;
-        }
-        else if (!productId.equals(other.productId))
+        } else if (!productId.equals(other.productId))
             return false;
         return true;
     }
@@ -133,6 +156,6 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Produkt [productId= "+productId+", nazwa=" + name +"]";
+        return "Produkt [productId= " + productId + ", nazwa=" + name + "]";
     }
 }

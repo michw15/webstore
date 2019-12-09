@@ -1,6 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
@@ -9,6 +10,8 @@
 </head>
 <body>
 <section>
+    <div id="message">
+    </div>
     <div class="jumbotron">
         <a href="<c:url value="/logout" />" class="btn btn-danger btn-mini pull-right">
             Wyloguj sie
@@ -20,7 +23,7 @@
     </div>
 </section>
 <section class="container">
-    <form:form modelAttribute="newProduct" class="form-horizontal">
+    <form:form modelAttribute="newProduct" class="form-horizontal" enctype="multipart/form-data">
         <fieldset>
             <legend>Dodaj nowy produkt</legend>
             <div class="form-group">
@@ -90,6 +93,22 @@
                     <spring:message code="addProduct.form.conditionOld.label"/>
                     <form:radiobutton path="condition" id="condition" value="Refurbished"/>
                     <spring:message code="addProduct.form.conditionRefurbished.label"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-lg-2" for="productImage">
+                    <spring:message code="addProduct.form.productImage.label"/>
+                </label>
+                <div class="col-lg-10">
+                    <form:input path="productImage" id="productImage" type="file" class="form:input-large"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-lg-2" for="productFile">
+                    <spring:message code="addProduct.form.productFile.label"/>
+                </label>
+                <div class="col-lg-10">
+                    <form:input path="productFile" id="productFile" type="file" class="form:input-large"/>
                 </div>
             </div>
             <div class="form-group">
